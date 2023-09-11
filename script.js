@@ -14,11 +14,11 @@ function generatePassword() {
   const numericChars = '0123456789';
   const specialChars = '!@#$%^&*()_+[]{}|;:,.<>?';
 
-  let passwordChars = '';
-  let password = '';
+  var passwordChars = '';
+  var password = '';
 
   // Prompt for password length and validate it
-  let passwordLength = parseInt(prompt('Enter the length of the password (between 8 and 128 characters):'));
+  var passwordLength = parseInt(prompt('Enter the length of the password (between 8 and 128 characters):'));
 
   if (isNaN(passwordLength) || passwordLength < 8 || passwordLength > 128) {
     alert('Password length must be between 8 and 128 characters.');
@@ -43,7 +43,7 @@ function generatePassword() {
   if (includeSpecial) passwordChars += specialChars;
 
   // Generate the password
-  for (let i = 0; i < passwordLength; i++) {
+  for (var i = 0; i < passwordLength; i++) {
     password += getRandomCharacter(passwordChars);
   }
 
